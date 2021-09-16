@@ -1,10 +1,11 @@
 import { isInTestEnv } from "./index";
 
 describe('isInTestEnv Tests Suite', () => {
-    it('should return true or false', () => {
-        expect(isInTestEnv()).toBe(true || false)
+    it('should be in test env', () => {
+        expect(isInTestEnv()).toBe(true)
     });
     it('should return something', () => {
-        expect(isInTestEnv()).toBeDefined()
+        process.env.NODE_ENV = 'dev'
+        expect(isInTestEnv()).not.toBe(true)
     })
 })
