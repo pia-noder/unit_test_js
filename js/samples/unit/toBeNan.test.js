@@ -1,26 +1,25 @@
-/**
- * 
- * @param {number} a 
- * @param {number} b 
- * @returns {number}
- */
-const makeSum = (a, b) => a + b
 
 /**
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
  * 
- * @param {string} a 
- * @param {number} b 
+ *  */ 
+const makeSum = (a, b) => a + b;
+
+/**
+ * @param {string} a
+ * @param {number} b
  * @returns {string}
  */
+
 const makeString = (a, b) => a * b
 
-
-describe("ToBeNan Unit Test Suites", () => {
-    it('should return a NaN', () => {
-        expect(makeSum(2, 2)).not.toBeNaN()
-    })
-
-    it('should not return a NaN', () => {
-        expect(makeString("hi", 3)).toBeNaN()
+describe('toBeNaN Tests Suite', () => {
+    it('should be a number', () => {
+        expect(makeSum(2,2)).not.toBeNaN()
+    });
+    it('should not be a number', () => {
+        expect(makeString('Chat', 2)).toBeNaN()
     })
 })

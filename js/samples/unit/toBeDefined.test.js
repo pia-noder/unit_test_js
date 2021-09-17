@@ -1,17 +1,13 @@
-/**
- * 
- * @returns {string}
- */
-const getName = () => "thomas"
+const getName = () => 'Charlotte'
+const userAge = 30
 
-const userAge = 31
-
-describe('toBeDefined Unit Test Suites', () => {
-    it('should return something', () => (
+//toBeDEfined sur une fonction verifie que la fonction retourne bien quelque chose
+describe('toBeDefined Tests Suite', () => {
+    it('should return a name', () => {
         expect(getName()).toBeDefined()
-    ))
-
-    it('should also return something', () => {
+    });
+    //toBeDefined sur une constante verifie que celle-ci est bien defini
+    it('should return an age/number', () => {
         expect(userAge).toBeDefined()
     })
 })

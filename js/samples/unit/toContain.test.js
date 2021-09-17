@@ -1,15 +1,14 @@
 /**
- * 
  * @returns {array}
  */
-const getFriends = () => ["mike", "john", "lucie", "anna"]
 
-describe('toContain Unit Test Suite', () => {
-    it('should contain the name "john"', () => {
-        expect(getFriends()).toContain('john')
+const getFriends = () => ['Louise', "Theo", "Rose","Opi"]
+
+describe('toContain Tests Suite', () => {
+    it('should contain that friend', () => {
+        expect(getFriends()).toContain('Theo')
+    });
+    it('should not contain this name', () => {
+        expect(getFriends()).not.toContain('Blandine')
     })
-    
-    it('should not contain the name "thomas"', () => {
-        expect(getFriends()).not.toContain('thomas')
-    })
-})
+}) 
